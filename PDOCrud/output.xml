@@ -1,0 +1,1748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200127 00:05:31.176" rpa="false">
+<suite id="s1" name="PDOCrud" source="C:\Users\renat\eclipse-workspace\PDOCrud">
+<suite id="s1-s1" name="General" source="C:\Users\renat\eclipse-workspace\PDOCrud\general.robot">
+<test id="s1-s1-t1" name="001-Should create a new register">
+<kw name="Open Test Browser" library="util-resources" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_GC}</arg>
+</arguments>
+<msg timestamp="20200127 00:05:31.713" level="INFO">Opening browser 'chrome' to base url 'https://pdocrud.com/demo/pages/'.</msg>
+<status status="PASS" starttime="20200127 00:05:31.713" endtime="20200127 00:05:42.159"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200127 00:05:42.159" endtime="20200127 00:05:44.344"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:05:31.713" endtime="20200127 00:05:44.344"></status>
+</kw>
+<kw name="Accessing Employee's form to add one employee" library="list-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${add_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:05:44.348" endtime="20200127 00:05:44.484"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${add_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:05:44.488" level="INFO">Clicking element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20200127 00:05:44.488" endtime="20200127 00:05:44.719"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:05:44.348" endtime="20200127 00:05:44.719"></status>
+</kw>
+<kw name="Filling Employee's form" library="create-resources">
+<arguments>
+<arg>Alicia</arg>
+<arg>Parker</arg>
+<arg>Blv 123</arg>
+<arg>San Francisco</arg>
+<arg>California</arg>
+<arg>12345678</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:05:44.719" endtime="20200127 00:05:44.968"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>${Fist_Name}</arg>
+</arguments>
+<msg timestamp="20200127 00:05:44.972" level="INFO">Typing text 'Alicia' into text field 'id=ZW1wbG95ZWUjJGZpcnN0X25hbWVAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:05:44.968" endtime="20200127 00:05:45.223"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:05:45.223" endtime="20200127 00:05:45.255"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>${Last_Name}</arg>
+</arguments>
+<msg timestamp="20200127 00:05:45.255" level="INFO">Typing text 'Parker' into text field 'id=ZW1wbG95ZWUjJGxhc3RfbmFtZUAzZHNmc2RmKio5OTM0MzI0'.</msg>
+<status status="PASS" starttime="20200127 00:05:45.255" endtime="20200127 00:05:45.427"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:05:45.427" endtime="20200127 00:05:45.455"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>${Adress}</arg>
+</arguments>
+<msg timestamp="20200127 00:05:45.455" level="INFO">Typing text 'Blv 123' into text field 'id=ZW1wbG95ZWUjJEFkZHJlc3NAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:05:45.455" endtime="20200127 00:05:45.623"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:05:45.623" endtime="20200127 00:05:45.647"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>${City}</arg>
+</arguments>
+<msg timestamp="20200127 00:05:45.647" level="INFO">Typing text 'San Francisco' into text field 'id=ZW1wbG95ZWUjJENpdHlAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:05:45.647" endtime="20200127 00:05:45.862"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:05:45.862" endtime="20200127 00:05:45.886"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>${state}</arg>
+</arguments>
+<msg timestamp="20200127 00:05:45.890" level="INFO">Typing text 'California' into text field 'id=ZW1wbG95ZWUjJFN0YXRlQDNkc2ZzZGYqKjk5MzQzMjQ='.</msg>
+<status status="PASS" starttime="20200127 00:05:45.886" endtime="20200127 00:05:46.050"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:05:46.054" endtime="20200127 00:05:46.074"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>${Zip}</arg>
+</arguments>
+<msg timestamp="20200127 00:05:46.074" level="INFO">Typing text '12345678' into text field 'id=ZW1wbG95ZWUjJFppcEAzZHNmc2RmKio5OTM0MzI0'.</msg>
+<status status="PASS" starttime="20200127 00:05:46.074" endtime="20200127 00:05:46.210"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:05:44.719" endtime="20200127 00:05:46.210"></status>
+</kw>
+<kw name="Save Add's form" library="create-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${save_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:05:46.214" endtime="20200127 00:05:46.234"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${save_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:05:46.234" level="INFO">Clicking button 'class=pdocrud-submit'.</msg>
+<status status="PASS" starttime="20200127 00:05:46.234" endtime="20200127 00:05:46.386"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:05:46.210" endtime="20200127 00:05:46.386"></status>
+</kw>
+<kw name="Confirming if the data was saved" library="create-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${done_message}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:05:46.386" endtime="20200127 00:05:46.450"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${done_message}</arg>
+<arg>Operation done successfully</arg>
+</arguments>
+<msg timestamp="20200127 00:05:46.470" level="INFO">Current page contains element 'xpath=./html/body/div[1]/div/section[2]/section/form/div[2]/span[3]'.</msg>
+<status status="PASS" starttime="20200127 00:05:46.450" endtime="20200127 00:05:46.470"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200127 00:05:49.474" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200127 00:05:46.470" endtime="20200127 00:05:49.474"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:05:46.386" endtime="20200127 00:05:49.474"></status>
+</kw>
+<kw name="Close Test Browser" library="util-resources" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200127 00:05:49.474" endtime="20200127 00:05:53.636"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:05:49.474" endtime="20200127 00:05:53.636"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:05:31.712" endtime="20200127 00:05:53.636" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="002-Should search and find a term">
+<kw name="Open Test Browser" library="util-resources" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_GC}</arg>
+</arguments>
+<msg timestamp="20200127 00:05:53.642" level="INFO">Opening browser 'chrome' to base url 'https://pdocrud.com/demo/pages/'.</msg>
+<status status="PASS" starttime="20200127 00:05:53.642" endtime="20200127 00:06:03.020"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200127 00:06:03.020" endtime="20200127 00:06:05.250"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:05:53.641" endtime="20200127 00:06:05.250"></status>
+</kw>
+<kw name="Searching for a First Name" library="list-resources">
+<arguments>
+<arg>Alicia</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${search_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:05.254" endtime="20200127 00:06:05.309"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_field}</arg>
+<arg>${Term}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:05.309" level="INFO">Typing text 'Alicia' into text field 'id=pdocrud_search_box'.</msg>
+<status status="PASS" starttime="20200127 00:06:05.309" endtime="20200127 00:06:05.612"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${go_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:05.612" endtime="20200127 00:06:05.636"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${go_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:05.640" level="INFO">Clicking element 'id=pdocrud_search_btn'.</msg>
+<status status="PASS" starttime="20200127 00:06:05.636" endtime="20200127 00:06:05.787"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${First_Name_Cel_table}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:05.787" endtime="20200127 00:06:05.823"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${First_Name_Cel_table}</arg>
+<arg>${Term}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:05.839" level="INFO">Current page contains element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[3]/div[2]/div/div/table/tbody/tr[1]/td[4]'.</msg>
+<status status="PASS" starttime="20200127 00:06:05.823" endtime="20200127 00:06:05.839"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:05.254" endtime="20200127 00:06:05.839"></status>
+</kw>
+<kw name="Close Test Browser" library="util-resources" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200127 00:06:05.843" endtime="20200127 00:06:09.969"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:05.839" endtime="20200127 00:06:09.969"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:05:53.640" endtime="20200127 00:06:09.969" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="003-Should visit add's page and return using back">
+<kw name="Open Test Browser" library="util-resources" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_GC}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:09.974" level="INFO">Opening browser 'chrome' to base url 'https://pdocrud.com/demo/pages/'.</msg>
+<status status="PASS" starttime="20200127 00:06:09.974" endtime="20200127 00:06:23.442"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200127 00:06:23.446" endtime="20200127 00:06:25.584"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:09.973" endtime="20200127 00:06:25.584"></status>
+</kw>
+<kw name="Accessing Employee's form to add one employee" library="list-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${add_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:25.588" endtime="20200127 00:06:25.624"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${add_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:25.628" level="INFO">Clicking element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20200127 00:06:25.628" endtime="20200127 00:06:25.805"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:25.584" endtime="20200127 00:06:25.805"></status>
+</kw>
+<kw name="Return to the list page" library="create-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${back_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:25.809" endtime="20200127 00:06:26.051"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${back_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:26.051" level="INFO">Clicking button 'class=pdocrud-back'.</msg>
+<status status="PASS" starttime="20200127 00:06:26.051" endtime="20200127 00:06:26.179"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:25.805" endtime="20200127 00:06:26.179"></status>
+</kw>
+<kw name="Searching for a First Name" library="list-resources">
+<arguments>
+<arg>Alicia</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${search_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:26.183" endtime="20200127 00:06:26.415"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_field}</arg>
+<arg>${Term}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:26.415" level="INFO">Typing text 'Alicia' into text field 'id=pdocrud_search_box'.</msg>
+<status status="PASS" starttime="20200127 00:06:26.415" endtime="20200127 00:06:26.638"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${go_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:26.638" endtime="20200127 00:06:26.662"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${go_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:26.662" level="INFO">Clicking element 'id=pdocrud_search_btn'.</msg>
+<status status="PASS" starttime="20200127 00:06:26.662" endtime="20200127 00:06:26.830"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${First_Name_Cel_table}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:26.834" endtime="20200127 00:06:26.854"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${First_Name_Cel_table}</arg>
+<arg>${Term}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:26.870" level="INFO">Current page contains element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[3]/div[2]/div/div/table/tbody/tr[1]/td[4]'.</msg>
+<status status="PASS" starttime="20200127 00:06:26.854" endtime="20200127 00:06:26.870"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:26.179" endtime="20200127 00:06:26.870"></status>
+</kw>
+<kw name="Close Test Browser" library="util-resources" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200127 00:06:26.874" endtime="20200127 00:06:30.988"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:26.870" endtime="20200127 00:06:30.988"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:09.969" endtime="20200127 00:06:30.988" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="004-Should edit a register">
+<kw name="Open Test Browser" library="util-resources" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_GC}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:30.995" level="INFO">Opening browser 'chrome' to base url 'https://pdocrud.com/demo/pages/'.</msg>
+<status status="PASS" starttime="20200127 00:06:30.995" endtime="20200127 00:06:41.312"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200127 00:06:41.312" endtime="20200127 00:06:43.461"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:30.992" endtime="20200127 00:06:43.461"></status>
+</kw>
+<kw name="Accessing Employees's form to edit one employee" library="list-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${edit_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:43.465" endtime="20200127 00:06:43.514"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${edit_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:43.514" level="INFO">Clicking element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[3]/div[2]/div/div/table/tbody/tr[1]/td[10]/a[2]/i'.</msg>
+<status status="PASS" starttime="20200127 00:06:43.514" endtime="20200127 00:06:43.675"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:43.461" endtime="20200127 00:06:43.675"></status>
+</kw>
+<kw name="Editing Employee's form and saving" library="edit-resources">
+<arguments>
+<arg>Edit</arg>
+<arg>Edit</arg>
+<arg>Edit</arg>
+<arg>Edit</arg>
+<arg>Edit</arg>
+<arg>Edit</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:43.679" endtime="20200127 00:06:43.927"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>${Fist_Name}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:43.931" level="INFO">Typing text 'Edit' into text field 'id=ZW1wbG95ZWUjJGZpcnN0X25hbWVAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:06:43.927" endtime="20200127 00:06:44.107"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:44.107" endtime="20200127 00:06:44.131"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>${Last_Name}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:44.131" level="INFO">Typing text 'Edit' into text field 'id=ZW1wbG95ZWUjJGxhc3RfbmFtZUAzZHNmc2RmKio5OTM0MzI0'.</msg>
+<status status="PASS" starttime="20200127 00:06:44.131" endtime="20200127 00:06:44.291"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:44.291" endtime="20200127 00:06:44.319"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>${Adress}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:44.319" level="INFO">Typing text 'Edit' into text field 'id=ZW1wbG95ZWUjJEFkZHJlc3NAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:06:44.319" endtime="20200127 00:06:44.455"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:44.455" endtime="20200127 00:06:44.475"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>${City}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:44.475" level="INFO">Typing text 'Edit' into text field 'id=ZW1wbG95ZWUjJENpdHlAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:06:44.475" endtime="20200127 00:06:44.646"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:44.646" endtime="20200127 00:06:44.674"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>${state}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:44.674" level="INFO">Typing text 'Edit' into text field 'id=ZW1wbG95ZWUjJFN0YXRlQDNkc2ZzZGYqKjk5MzQzMjQ='.</msg>
+<status status="PASS" starttime="20200127 00:06:44.674" endtime="20200127 00:06:44.823"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:44.823" endtime="20200127 00:06:44.847"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>${Zip}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:44.847" level="INFO">Typing text 'Edit' into text field 'id=ZW1wbG95ZWUjJFppcEAzZHNmc2RmKio5OTM0MzI0'.</msg>
+<status status="PASS" starttime="20200127 00:06:44.847" endtime="20200127 00:06:44.971"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${save_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:44.971" endtime="20200127 00:06:44.995"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${save_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:44.995" level="INFO">Clicking button 'class=pdocrud-submit'.</msg>
+<status status="PASS" starttime="20200127 00:06:44.995" endtime="20200127 00:06:45.167"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${done_message}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:06:45.167" endtime="20200127 00:06:45.191"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${done_message}</arg>
+<arg>Operation done successfully</arg>
+</arguments>
+<msg timestamp="20200127 00:06:45.207" level="INFO">Current page contains element 'xpath=./html/body/div[1]/div/section[2]/section/form/div[2]/span[3]'.</msg>
+<status status="PASS" starttime="20200127 00:06:45.191" endtime="20200127 00:06:45.207"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:43.675" endtime="20200127 00:06:45.207"></status>
+</kw>
+<kw name="Close Test Browser" library="util-resources" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200127 00:06:45.211" endtime="20200127 00:06:49.323"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:45.211" endtime="20200127 00:06:49.323"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:30.991" endtime="20200127 00:06:49.323" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="005-Should delete a register">
+<kw name="Open Test Browser" library="util-resources" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_GC}</arg>
+</arguments>
+<msg timestamp="20200127 00:06:49.333" level="INFO">Opening browser 'chrome' to base url 'https://pdocrud.com/demo/pages/'.</msg>
+<status status="PASS" starttime="20200127 00:06:49.329" endtime="20200127 00:06:59.730"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200127 00:06:59.730" endtime="20200127 00:07:01.895"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:49.329" endtime="20200127 00:07:01.895"></status>
+</kw>
+<kw name="Deleting one employee" library="list-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${delete_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:01.899" endtime="20200127 00:07:01.959"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${delete_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:01.963" level="INFO">Clicking element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[3]/div[2]/div/div/table/tbody/tr[1]/td[10]/a[3]/i'.</msg>
+<status status="PASS" starttime="20200127 00:07:01.963" endtime="20200127 00:07:02.124"></status>
+</kw>
+<kw name="Handle Alert" library="Selenium2Library">
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" starttime="20200127 00:07:02.124" endtime="20200127 00:07:02.132"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:01.895" endtime="20200127 00:07:02.132"></status>
+</kw>
+<kw name="Close Test Browser" library="util-resources" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200127 00:07:02.136" endtime="20200127 00:07:06.232"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:02.136" endtime="20200127 00:07:06.232"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:06:49.328" endtime="20200127 00:07:06.232" critical="yes"></status>
+</test>
+<test id="s1-s1-t6" name="006-Should verify a mandatory field">
+<kw name="Open Test Browser" library="util-resources" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_GC}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:06.236" level="INFO">Opening browser 'chrome' to base url 'https://pdocrud.com/demo/pages/'.</msg>
+<status status="PASS" starttime="20200127 00:07:06.236" endtime="20200127 00:07:15.748"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200127 00:07:15.752" endtime="20200127 00:07:17.920"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:06.235" endtime="20200127 00:07:17.920"></status>
+</kw>
+<kw name="Accessing Employee's form to add one employee" library="list-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${add_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:17.924" endtime="20200127 00:07:17.972"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${add_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:17.976" level="INFO">Clicking element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20200127 00:07:17.976" endtime="20200127 00:07:18.128"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:17.924" endtime="20200127 00:07:18.128"></status>
+</kw>
+<kw name="Filling Employee's form" library="create-resources">
+<arguments>
+<arg>${EMPTY}</arg>
+<arg>Parker</arg>
+<arg>Blv 123</arg>
+<arg>San Francisco</arg>
+<arg>California</arg>
+<arg>12345678</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:18.132" endtime="20200127 00:07:18.364"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>${Fist_Name}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:18.364" level="INFO">Typing text '' into text field 'id=ZW1wbG95ZWUjJGZpcnN0X25hbWVAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:07:18.364" endtime="20200127 00:07:18.444"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:18.444" endtime="20200127 00:07:18.464"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>${Last_Name}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:18.464" level="INFO">Typing text 'Parker' into text field 'id=ZW1wbG95ZWUjJGxhc3RfbmFtZUAzZHNmc2RmKio5OTM0MzI0'.</msg>
+<status status="PASS" starttime="20200127 00:07:18.464" endtime="20200127 00:07:18.604"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:18.604" endtime="20200127 00:07:18.620"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>${Adress}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:18.624" level="INFO">Typing text 'Blv 123' into text field 'id=ZW1wbG95ZWUjJEFkZHJlc3NAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:07:18.624" endtime="20200127 00:07:18.772"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:18.776" endtime="20200127 00:07:18.791"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>${City}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:18.795" level="INFO">Typing text 'San Francisco' into text field 'id=ZW1wbG95ZWUjJENpdHlAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:07:18.791" endtime="20200127 00:07:18.967"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:18.967" endtime="20200127 00:07:18.983"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>${state}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:18.983" level="INFO">Typing text 'California' into text field 'id=ZW1wbG95ZWUjJFN0YXRlQDNkc2ZzZGYqKjk5MzQzMjQ='.</msg>
+<status status="PASS" starttime="20200127 00:07:18.983" endtime="20200127 00:07:19.147"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:19.147" endtime="20200127 00:07:19.163"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>${Zip}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:19.167" level="INFO">Typing text '12345678' into text field 'id=ZW1wbG95ZWUjJFppcEAzZHNmc2RmKio5OTM0MzI0'.</msg>
+<status status="PASS" starttime="20200127 00:07:19.163" endtime="20200127 00:07:19.319"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:18.132" endtime="20200127 00:07:19.319"></status>
+</kw>
+<kw name="Save Add's form" library="create-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${save_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:19.319" endtime="20200127 00:07:19.359"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${save_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:19.359" level="INFO">Clicking button 'class=pdocrud-submit'.</msg>
+<status status="PASS" starttime="20200127 00:07:19.359" endtime="20200127 00:07:19.519"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:19.319" endtime="20200127 00:07:19.519"></status>
+</kw>
+<kw name="Close Test Browser" library="util-resources" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200127 00:07:19.523" endtime="20200127 00:07:23.687"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:19.523" endtime="20200127 00:07:23.687"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:06.232" endtime="20200127 00:07:23.687" critical="yes"></status>
+</test>
+<test id="s1-s1-t7" name="007-Should view a register">
+<kw name="Open Test Browser" library="util-resources" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_GC}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:23.692" level="INFO">Opening browser 'chrome' to base url 'https://pdocrud.com/demo/pages/'.</msg>
+<status status="PASS" starttime="20200127 00:07:23.692" endtime="20200127 00:07:33.423"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200127 00:07:33.423" endtime="20200127 00:07:35.627"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:23.692" endtime="20200127 00:07:35.627"></status>
+</kw>
+<kw name="Accessing Employees's table to view one employee" library="list-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${view_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:35.631" endtime="20200127 00:07:35.723"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${view_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:35.727" level="INFO">Clicking element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[3]/div[2]/div/div/table/tbody/tr[1]/td[10]/a[1]'.</msg>
+<status status="PASS" starttime="20200127 00:07:35.727" endtime="20200127 00:07:35.907"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:35.631" endtime="20200127 00:07:35.907"></status>
+</kw>
+<kw name="Confirming if it is the View Page" library="view-resources">
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>View</arg>
+</arguments>
+<msg timestamp="20200127 00:07:35.955" level="INFO">Current page contains text 'View'.</msg>
+<status status="PASS" starttime="20200127 00:07:35.911" endtime="20200127 00:07:35.955"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:35.911" endtime="20200127 00:07:35.955"></status>
+</kw>
+<kw name="Close Test Browser" library="util-resources" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200127 00:07:35.959" endtime="20200127 00:07:40.112"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:35.955" endtime="20200127 00:07:40.112"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:23.691" endtime="20200127 00:07:40.112" critical="yes"></status>
+</test>
+<test id="s1-s1-t8" name="008-Should create the same data">
+<kw name="Open Test Browser" library="util-resources" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_GC}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:40.116" level="INFO">Opening browser 'chrome' to base url 'https://pdocrud.com/demo/pages/'.</msg>
+<status status="PASS" starttime="20200127 00:07:40.116" endtime="20200127 00:07:50.276"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200127 00:07:50.280" endtime="20200127 00:07:52.431"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:40.116" endtime="20200127 00:07:52.431"></status>
+</kw>
+<kw name="Accessing Employee's form to add one employee" library="list-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${add_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:52.435" endtime="20200127 00:07:52.539"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${add_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:52.543" level="INFO">Clicking element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20200127 00:07:52.539" endtime="20200127 00:07:52.737"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:52.435" endtime="20200127 00:07:52.737"></status>
+</kw>
+<kw name="Filling Employee's form" library="create-resources">
+<arguments>
+<arg>Alicia</arg>
+<arg>Parker</arg>
+<arg>Blv 123</arg>
+<arg>San Francisco</arg>
+<arg>California</arg>
+<arg>12345678</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:52.741" endtime="20200127 00:07:52.996"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>${Fist_Name}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:52.996" level="INFO">Typing text 'Alicia' into text field 'id=ZW1wbG95ZWUjJGZpcnN0X25hbWVAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:07:52.996" endtime="20200127 00:07:53.163"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:53.163" endtime="20200127 00:07:53.191"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>${Last_Name}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:53.195" level="INFO">Typing text 'Parker' into text field 'id=ZW1wbG95ZWUjJGxhc3RfbmFtZUAzZHNmc2RmKio5OTM0MzI0'.</msg>
+<status status="PASS" starttime="20200127 00:07:53.191" endtime="20200127 00:07:53.355"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:53.355" endtime="20200127 00:07:53.379"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>${Adress}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:53.383" level="INFO">Typing text 'Blv 123' into text field 'id=ZW1wbG95ZWUjJEFkZHJlc3NAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:07:53.379" endtime="20200127 00:07:53.555"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:53.559" endtime="20200127 00:07:53.595"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>${City}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:53.595" level="INFO">Typing text 'San Francisco' into text field 'id=ZW1wbG95ZWUjJENpdHlAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:07:53.595" endtime="20200127 00:07:53.854"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:53.854" endtime="20200127 00:07:53.882"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>${state}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:53.882" level="INFO">Typing text 'California' into text field 'id=ZW1wbG95ZWUjJFN0YXRlQDNkc2ZzZGYqKjk5MzQzMjQ='.</msg>
+<status status="PASS" starttime="20200127 00:07:53.882" endtime="20200127 00:07:54.050"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:54.054" endtime="20200127 00:07:54.078"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>${Zip}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:54.078" level="INFO">Typing text '12345678' into text field 'id=ZW1wbG95ZWUjJFppcEAzZHNmc2RmKio5OTM0MzI0'.</msg>
+<status status="PASS" starttime="20200127 00:07:54.078" endtime="20200127 00:07:54.234"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:52.737" endtime="20200127 00:07:54.238"></status>
+</kw>
+<kw name="Save Add's form" library="create-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${save_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:54.238" endtime="20200127 00:07:54.262"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${save_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:54.262" level="INFO">Clicking button 'class=pdocrud-submit'.</msg>
+<status status="PASS" starttime="20200127 00:07:54.262" endtime="20200127 00:07:54.430"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:54.238" endtime="20200127 00:07:54.430"></status>
+</kw>
+<kw name="Confirming if the data was saved" library="create-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${done_message}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:54.430" endtime="20200127 00:07:54.458"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${done_message}</arg>
+<arg>Operation done successfully</arg>
+</arguments>
+<msg timestamp="20200127 00:07:54.478" level="INFO">Current page contains element 'xpath=./html/body/div[1]/div/section[2]/section/form/div[2]/span[3]'.</msg>
+<status status="PASS" starttime="20200127 00:07:54.458" endtime="20200127 00:07:54.478"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200127 00:07:57.479" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200127 00:07:54.478" endtime="20200127 00:07:57.479"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:54.430" endtime="20200127 00:07:57.479"></status>
+</kw>
+<kw name="Return to the list page" library="create-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${back_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:57.479" endtime="20200127 00:07:57.495"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${back_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:57.495" level="INFO">Clicking button 'class=pdocrud-back'.</msg>
+<status status="PASS" starttime="20200127 00:07:57.495" endtime="20200127 00:07:57.632"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:57.479" endtime="20200127 00:07:57.632"></status>
+</kw>
+<kw name="Deleting one employee" library="list-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${delete_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:07:57.636" endtime="20200127 00:07:57.872"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${delete_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:07:57.876" level="INFO">Clicking element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[3]/div[2]/div/div/table/tbody/tr[1]/td[10]/a[3]/i'.</msg>
+<status status="PASS" starttime="20200127 00:07:57.872" endtime="20200127 00:07:57.966"></status>
+</kw>
+<kw name="Handle Alert" library="Selenium2Library">
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" starttime="20200127 00:07:57.966" endtime="20200127 00:07:57.978"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:57.632" endtime="20200127 00:07:57.978"></status>
+</kw>
+<kw name="Close Test Browser" library="util-resources" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200127 00:07:57.982" endtime="20200127 00:08:02.246"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:57.978" endtime="20200127 00:08:02.246"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:07:40.112" endtime="20200127 00:08:02.246" critical="yes"></status>
+</test>
+<test id="s1-s1-t9" name="009-Should cancel a clean all the fields in Add's page">
+<kw name="Open Test Browser" library="util-resources" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_GC}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:02.251" level="INFO">Opening browser 'chrome' to base url 'https://pdocrud.com/demo/pages/'.</msg>
+<status status="PASS" starttime="20200127 00:08:02.251" endtime="20200127 00:08:12.667"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200127 00:08:12.667" endtime="20200127 00:08:14.826"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:02.251" endtime="20200127 00:08:14.826"></status>
+</kw>
+<kw name="Accessing Employee's form to add one employee" library="list-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${add_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:14.826" endtime="20200127 00:08:14.870"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${add_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:14.874" level="INFO">Clicking element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20200127 00:08:14.870" endtime="20200127 00:08:15.066"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:14.826" endtime="20200127 00:08:15.066"></status>
+</kw>
+<kw name="Filling Employee's form" library="create-resources">
+<arguments>
+<arg>AAA</arg>
+<arg>PPP</arg>
+<arg>Blv 123</arg>
+<arg>SanFrsc</arg>
+<arg>Calix</arg>
+<arg>xxxxxxxx</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:15.070" endtime="20200127 00:08:15.349"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>${Fist_Name}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:15.349" level="INFO">Typing text 'AAA' into text field 'id=ZW1wbG95ZWUjJGZpcnN0X25hbWVAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:08:15.349" endtime="20200127 00:08:15.501"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:15.501" endtime="20200127 00:08:15.536"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>${Last_Name}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:15.540" level="INFO">Typing text 'PPP' into text field 'id=ZW1wbG95ZWUjJGxhc3RfbmFtZUAzZHNmc2RmKio5OTM0MzI0'.</msg>
+<status status="PASS" starttime="20200127 00:08:15.536" endtime="20200127 00:08:15.728"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:15.728" endtime="20200127 00:08:15.760"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>${Adress}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:15.760" level="INFO">Typing text 'Blv 123' into text field 'id=ZW1wbG95ZWUjJEFkZHJlc3NAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:08:15.760" endtime="20200127 00:08:15.968"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:15.968" endtime="20200127 00:08:15.990"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>${City}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:15.994" level="INFO">Typing text 'SanFrsc' into text field 'id=ZW1wbG95ZWUjJENpdHlAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:08:15.994" endtime="20200127 00:08:16.182"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:16.186" endtime="20200127 00:08:16.218"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>${state}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:16.222" level="INFO">Typing text 'Calix' into text field 'id=ZW1wbG95ZWUjJFN0YXRlQDNkc2ZzZGYqKjk5MzQzMjQ='.</msg>
+<status status="PASS" starttime="20200127 00:08:16.218" endtime="20200127 00:08:16.477"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:16.477" endtime="20200127 00:08:16.509"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>${Zip}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:16.513" level="INFO">Typing text 'xxxxxxxx' into text field 'id=ZW1wbG95ZWUjJFppcEAzZHNmc2RmKio5OTM0MzI0'.</msg>
+<status status="PASS" starttime="20200127 00:08:16.513" endtime="20200127 00:08:16.690"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:15.070" endtime="20200127 00:08:16.690"></status>
+</kw>
+<kw name="Canceling and cleaning fields" library="create-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${cancel_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:16.690" endtime="20200127 00:08:16.714"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${cancel_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:16.714" level="INFO">Clicking button 'class=pdocrud-cancel-btn'.</msg>
+<status status="PASS" starttime="20200127 00:08:16.714" endtime="20200127 00:08:16.848"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:16.848" endtime="20200127 00:08:16.862"></status>
+</kw>
+<kw name="Textfield Value Should Be" library="Selenium2Library">
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:16.902" level="INFO">Content of text field 'id=ZW1wbG95ZWUjJGZpcnN0X25hbWVAM2RzZnNkZioqOTkzNDMyNA==' is ''.</msg>
+<status status="PASS" starttime="20200127 00:08:16.866" endtime="20200127 00:08:16.902"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:16.902" endtime="20200127 00:08:16.914"></status>
+</kw>
+<kw name="Textfield Value Should Be" library="Selenium2Library">
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:16.954" level="INFO">Content of text field 'id=ZW1wbG95ZWUjJGxhc3RfbmFtZUAzZHNmc2RmKio5OTM0MzI0' is ''.</msg>
+<status status="PASS" starttime="20200127 00:08:16.918" endtime="20200127 00:08:16.954"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:16.954" endtime="20200127 00:08:16.966"></status>
+</kw>
+<kw name="Textfield Value Should Be" library="Selenium2Library">
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:17.010" level="INFO">Content of text field 'id=ZW1wbG95ZWUjJEFkZHJlc3NAM2RzZnNkZioqOTkzNDMyNA==' is ''.</msg>
+<status status="PASS" starttime="20200127 00:08:16.966" endtime="20200127 00:08:17.010"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:17.010" endtime="20200127 00:08:17.026"></status>
+</kw>
+<kw name="Textfield Value Should Be" library="Selenium2Library">
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:17.066" level="INFO">Content of text field 'id=ZW1wbG95ZWUjJENpdHlAM2RzZnNkZioqOTkzNDMyNA==' is ''.</msg>
+<status status="PASS" starttime="20200127 00:08:17.026" endtime="20200127 00:08:17.066"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:17.066" endtime="20200127 00:08:17.078"></status>
+</kw>
+<kw name="Textfield Value Should Be" library="Selenium2Library">
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:17.114" level="INFO">Content of text field 'id=ZW1wbG95ZWUjJFN0YXRlQDNkc2ZzZGYqKjk5MzQzMjQ=' is ''.</msg>
+<status status="PASS" starttime="20200127 00:08:17.078" endtime="20200127 00:08:17.114"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:17.114" endtime="20200127 00:08:17.123"></status>
+</kw>
+<kw name="Textfield Value Should Be" library="Selenium2Library">
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:17.164" level="INFO">Content of text field 'id=ZW1wbG95ZWUjJFppcEAzZHNmc2RmKio5OTM0MzI0' is ''.</msg>
+<status status="PASS" starttime="20200127 00:08:17.123" endtime="20200127 00:08:17.164"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:16.690" endtime="20200127 00:08:17.168"></status>
+</kw>
+<kw name="Close Test Browser" library="util-resources" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200127 00:08:17.168" endtime="20200127 00:08:21.337"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:17.168" endtime="20200127 00:08:21.337"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:02.249" endtime="20200127 00:08:21.337" critical="yes"></status>
+</test>
+<test id="s1-s1-t10" name="010-Ordering First Name column starting by the names with the letter Z">
+<kw name="Open Test Browser" library="util-resources" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_GC}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:21.343" level="INFO">Opening browser 'chrome' to base url 'https://pdocrud.com/demo/pages/'.</msg>
+<status status="PASS" starttime="20200127 00:08:21.343" endtime="20200127 00:08:31.363"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200127 00:08:31.363" endtime="20200127 00:08:33.580"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:21.342" endtime="20200127 00:08:33.580"></status>
+</kw>
+<kw name="Accessing Employee's form to add one employee" library="list-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${add_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:33.584" endtime="20200127 00:08:33.664"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${add_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:33.668" level="INFO">Clicking element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20200127 00:08:33.664" endtime="20200127 00:08:33.888"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:33.584" endtime="20200127 00:08:33.892"></status>
+</kw>
+<kw name="Filling Employee's form" library="create-resources">
+<arguments>
+<arg>ZZZZ</arg>
+<arg>Parker</arg>
+<arg>Blv 123</arg>
+<arg>San Francisco</arg>
+<arg>California</arg>
+<arg>12345678</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:33.892" endtime="20200127 00:08:34.144"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${first_name_field}</arg>
+<arg>${Fist_Name}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:34.144" level="INFO">Typing text 'ZZZZ' into text field 'id=ZW1wbG95ZWUjJGZpcnN0X25hbWVAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:08:34.144" endtime="20200127 00:08:34.408"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:34.408" endtime="20200127 00:08:34.440"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${last_name_field}</arg>
+<arg>${Last_Name}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:34.440" level="INFO">Typing text 'Parker' into text field 'id=ZW1wbG95ZWUjJGxhc3RfbmFtZUAzZHNmc2RmKio5OTM0MzI0'.</msg>
+<status status="PASS" starttime="20200127 00:08:34.440" endtime="20200127 00:08:34.696"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:34.696" endtime="20200127 00:08:34.728"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${adress_field}</arg>
+<arg>${Adress}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:34.732" level="INFO">Typing text 'Blv 123' into text field 'id=ZW1wbG95ZWUjJEFkZHJlc3NAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:08:34.732" endtime="20200127 00:08:35.059"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:35.059" endtime="20200127 00:08:35.091"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${city_field}</arg>
+<arg>${City}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:35.091" level="INFO">Typing text 'San Francisco' into text field 'id=ZW1wbG95ZWUjJENpdHlAM2RzZnNkZioqOTkzNDMyNA=='.</msg>
+<status status="PASS" starttime="20200127 00:08:35.091" endtime="20200127 00:08:35.429"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:35.429" endtime="20200127 00:08:35.469"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${state_field}</arg>
+<arg>${state}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:35.469" level="INFO">Typing text 'California' into text field 'id=ZW1wbG95ZWUjJFN0YXRlQDNkc2ZzZGYqKjk5MzQzMjQ='.</msg>
+<status status="PASS" starttime="20200127 00:08:35.469" endtime="20200127 00:08:35.749"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:35.753" endtime="20200127 00:08:35.781"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Zip_field}</arg>
+<arg>${Zip}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:35.781" level="INFO">Typing text '12345678' into text field 'id=ZW1wbG95ZWUjJFppcEAzZHNmc2RmKio5OTM0MzI0'.</msg>
+<status status="PASS" starttime="20200127 00:08:35.781" endtime="20200127 00:08:36.016"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:33.892" endtime="20200127 00:08:36.020"></status>
+</kw>
+<kw name="Save Add's form" library="create-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${save_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:36.020" endtime="20200127 00:08:36.048"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${save_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:36.048" level="INFO">Clicking button 'class=pdocrud-submit'.</msg>
+<status status="PASS" starttime="20200127 00:08:36.048" endtime="20200127 00:08:36.227"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:36.020" endtime="20200127 00:08:36.231"></status>
+</kw>
+<kw name="Confirming if the data was saved" library="create-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${done_message}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:36.231" endtime="20200127 00:08:36.259"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${done_message}</arg>
+<arg>Operation done successfully</arg>
+</arguments>
+<msg timestamp="20200127 00:08:36.279" level="INFO">Current page contains element 'xpath=./html/body/div[1]/div/section[2]/section/form/div[2]/span[3]'.</msg>
+<status status="PASS" starttime="20200127 00:08:36.259" endtime="20200127 00:08:36.279"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200127 00:08:39.287" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200127 00:08:36.279" endtime="20200127 00:08:39.287"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:36.231" endtime="20200127 00:08:39.287"></status>
+</kw>
+<kw name="Return to the list page" library="create-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${back_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:39.287" endtime="20200127 00:08:39.302"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${back_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:39.302" level="INFO">Clicking button 'class=pdocrud-back'.</msg>
+<status status="PASS" starttime="20200127 00:08:39.302" endtime="20200127 00:08:39.435"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:39.287" endtime="20200127 00:08:39.435"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200127 00:08:40.461" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200127 00:08:39.439" endtime="20200127 00:08:40.461"></status>
+</kw>
+<kw name="Order First Name starting by Z" library="list-resources">
+<arguments>
+<arg>ZZZZ</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Head_First_Name_table}</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:40.461" endtime="20200127 00:08:40.476"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Head_First_Name_table}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:40.476" level="INFO">Clicking element '(//span[contains(text(), "First name")])[1]'.</msg>
+<status status="PASS" starttime="20200127 00:08:40.476" endtime="20200127 00:08:40.596"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200127 00:08:41.600" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200127 00:08:40.596" endtime="20200127 00:08:41.600"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Head_First_Name_table}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:41.600" level="INFO">Clicking element '(//span[contains(text(), "First name")])[1]'.</msg>
+<status status="PASS" starttime="20200127 00:08:41.600" endtime="20200127 00:08:41.696"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200127 00:08:42.707" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200127 00:08:41.700" endtime="20200127 00:08:42.707"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${First_Name_Cel_table}</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:42.707" endtime="20200127 00:08:42.722"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${First_Name_Cel_table}</arg>
+<arg>${Term}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:42.738" level="INFO">Current page contains element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[3]/div[2]/div/div/table/tbody/tr[1]/td[4]'.</msg>
+<status status="PASS" starttime="20200127 00:08:42.722" endtime="20200127 00:08:42.738"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:40.461" endtime="20200127 00:08:42.738"></status>
+</kw>
+<kw name="Deleting one employee" library="list-resources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${delete_button}</arg>
+<arg>timeout=90</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:42.738" endtime="20200127 00:08:42.760"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${delete_button}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:42.760" level="INFO">Clicking element 'xpath=./html/body/div[1]/div/section[2]/section/div/div[3]/div[2]/div/div/table/tbody/tr[1]/td[10]/a[3]/i'.</msg>
+<status status="PASS" starttime="20200127 00:08:42.760" endtime="20200127 00:08:42.865"></status>
+</kw>
+<kw name="Handle Alert" library="Selenium2Library">
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" starttime="20200127 00:08:42.869" endtime="20200127 00:08:42.877"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:42.738" endtime="20200127 00:08:42.880"></status>
+</kw>
+<kw name="Close Test Browser" library="util-resources" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200127 00:08:42.880" endtime="20200127 00:08:47.070"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:42.880" endtime="20200127 00:08:47.070"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:21.341" endtime="20200127 00:08:47.070" critical="yes"></status>
+</test>
+<doc>A test suite with case tests for the employee requirements.</doc>
+<status status="PASS" starttime="20200127 00:05:31.299" endtime="20200127 00:08:47.076"></status>
+</suite>
+<status status="PASS" starttime="20200127 00:05:31.247" endtime="20200127 00:08:47.092"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0">Critical Tests</stat>
+<stat pass="10" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="10" fail="0" id="s1" name="PDOCrud">PDOCrud</stat>
+<stat pass="10" fail="0" id="s1-s1" name="General">PDOCrud.General</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
