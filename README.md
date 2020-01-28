@@ -1,4 +1,6 @@
 # Testing-with-Robot-Framework
+[Important: The main file with the test cases is general.robot]
+
 This is a test project that I made with Robot Framework.
 I Just organized the files using some of Page Object pattern. That pattern is very helpful.
 
